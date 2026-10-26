@@ -1,0 +1,642 @@
+{
+ "1710.03740": {
+  "title": "Mixed Precision Training",
+  "date": "2017-10",
+  "authors": "Paulius Micikevicius, Sharan Narang, Jonah Alben et al."
+ },
+ "2208.07339": {
+  "title": "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+  "date": "2022-08",
+  "authors": "Tim Dettmers, Mike Lewis, Younes Belkada et al."
+ },
+ "2209.05433": {
+  "title": "FP8 Formats for Deep Learning",
+  "date": "2022-09",
+  "authors": "Paulius Micikevicius, Dusan Stosic, Neil Burgess et al."
+ },
+ "2210.17323": {
+  "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+  "date": "2022-10",
+  "authors": "Elias Frantar, Saleh Ashkboos, Torsten Hoefler et al."
+ },
+ "2211.10438": {
+  "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+  "date": "2022-11",
+  "authors": "Guangxuan Xiao, Ji Lin, Mickael Seznec et al."
+ },
+ "2302.08007": {
+  "title": "With Shared Microexponents, A Little Shifting Goes a Long Way",
+  "date": "2023-02",
+  "authors": "Bita Rouhani, Ritchie Zhao, Venmugil Elango et al."
+ },
+ "2303.17951": {
+  "title": "FP8 versus INT8 for efficient deep learning inference",
+  "date": "2023-03",
+  "authors": "Mart van Baalen, Andrey Kuzmin, Suparna S Nair et al."
+ },
+ "2305.14314": {
+  "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+  "date": "2023-05",
+  "authors": "Tim Dettmers, Artidoro Pagnoni, Ari Holtzman et al."
+ },
+ "2305.17888": {
+  "title": "LLM-QAT: Data-Free Quantization Aware Training for Large Language Models",
+  "date": "2023-05",
+  "authors": "Zechun Liu, Barlas Oguz, Changsheng Zhao et al."
+ },
+ "2306.00978": {
+  "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+  "date": "2023-06",
+  "authors": "Ji Lin, Jiaming Tang, Haotian Tang et al."
+ },
+ "2308.13137": {
+  "title": "OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models",
+  "date": "2023-08",
+  "authors": "Wenqi Shao, Mengzhao Chen, Zhaoyang Zhang et al."
+ },
+ "2310.10537": {
+  "title": "Microscaling Data Formats for Deep Learning",
+  "date": "2023-10",
+  "authors": "Bita Darvish Rouhani, Ritchie Zhao, Ankit More et al."
+ },
+ "2310.18313": {
+  "title": "FP8-LM: Training FP8 Large Language Models",
+  "date": "2023-10",
+  "authors": "Houwen Peng, Kan Wu, Yixuan Wei et al."
+ },
+ "2310.19102": {
+  "title": "Atom: Low-bit Quantization for Efficient and Accurate LLM Serving",
+  "date": "2023-10",
+  "authors": "Yilong Zhao, Chien-Yu Lin, Kan Zhu et al."
+ },
+ "2401.18079": {
+  "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
+  "date": "2024-01",
+  "authors": "Coleman Hooper, Sehoon Kim, Hiva Mohammadzadeh et al."
+ },
+ "2402.02750": {
+  "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+  "date": "2024-02",
+  "authors": "Zirui Liu, Jiayi Yuan, Hongye Jin et al."
+ },
+ "2402.04396": {
+  "title": "QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks",
+  "date": "2024-02",
+  "authors": "Albert Tseng, Jerry Chee, Qingyao Sun et al."
+ },
+ "2402.17764": {
+  "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+  "date": "2024-02",
+  "authors": "Shuming Ma, Hongyu Wang, Lingxiao Ma et al."
+ },
+ "2404.00456": {
+  "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+  "date": "2024-03",
+  "authors": "Saleh Ashkboos, Amirkeivan Mohtashami, Maximilian L. Croci et al."
+ },
+ "2405.04532": {
+  "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+  "date": "2024-05",
+  "authors": "Yujun Lin, Haotian Tang, Shang Yang et al."
+ },
+ "2405.16406": {
+  "title": "SpinQuant: LLM quantization with learned rotations",
+  "date": "2024-05",
+  "authors": "Zechun Liu, Changsheng Zhao, Igor Fedorov et al."
+ },
+ "2408.11743": {
+  "title": "MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language Models",
+  "date": "2024-08",
+  "authors": "Elias Frantar, Roberto L. Castro, Jiale Chen et al."
+ },
+ "2411.05007": {
+  "title": "SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion Models",
+  "date": "2024-11",
+  "authors": "Muyang Li, Yujun Lin, Zhekai Zhang et al."
+ },
+ "2411.09909": {
+  "title": "AMXFP4: Taming Activation Outliers with Asymmetric Microscaling Floating-Point for 4-bit LLM Inference",
+  "date": "2024-11",
+  "authors": "Janghwan Lee, Jiwoong Park, Jinseok Kim et al."
+ },
+ "2412.19437": {
+  "title": "DeepSeek-V3 Technical Report",
+  "date": "2024-12",
+  "authors": "DeepSeek-AI, Aixin Liu, Bei Feng et al."
+ },
+ "2501.04052": {
+  "title": "RaZeR: Pushing the Limits of NVFP4 Quantization with Redundant Zero Remapping",
+  "date": "2025-01",
+  "authors": "Yuzong Chen, Xilai Dai, Jake Hyun et al."
+ },
+ "2501.17116": {
+  "title": "Optimizing Large Language Model Training Using FP4 Quantization",
+  "date": "2025-01",
+  "authors": "Ruizhe Wang, Yeyun Gong, Xiao Liu et al."
+ },
+ "2502.20586": {
+  "title": "Training LLMs with MXFP4",
+  "date": "2025-02",
+  "authors": "Albert Tseng, Tao Yu, Youngsuk Park"
+ },
+ "2502.20853": {
+  "title": "Oscillation-Reduced MXFP4 Training for Vision Transformers",
+  "date": "2025-02",
+  "authors": "Yuxiang Chen, Haocheng Xi, Jun Zhu et al."
+ },
+ "2503.13565": {
+  "title": "ML-SpecQD: Multi-Level Speculative Decoding with Quantized Drafts",
+  "date": "2025-03",
+  "authors": "Evangelos Georganas, Dhiraj Kalamkar, Alexander Kozlov et al."
+ },
+ "2503.18773": {
+  "title": "BitDecoding: Unlocking Tensor Cores for Long-Context LLMs with Low-Bit KV Cache",
+  "date": "2025-03",
+  "authors": "Dayou Du, Shijie Cao, Jianyi Cheng et al."
+ },
+ "2504.04823": {
+  "title": "Quantization Hurts Reasoning? An Empirical Study on Quantized Reasoning Models",
+  "date": "2025-04",
+  "authors": "Ruikang Liu, Yuxuan Sun, Manyi Zhang et al."
+ },
+ "2505.11594": {
+  "title": "SageAttention3: Microscaling FP4 Attention for Inference and An Exploration of 8-Bit Training",
+  "date": "2025-05",
+  "authors": "Jintao Zhang, Jia Wei, Pengle Zhang et al."
+ },
+ "2505.14669": {
+  "title": "Quartet: Native FP4 Training Can Be Optimal for Large Language Models",
+  "date": "2025-05",
+  "authors": "Roberto L. Castro, Andrei Panferov, Soroush Tabesh et al."
+ },
+ "2505.19115": {
+  "title": "FP4 All the Way: Fully Quantized Training of LLMs",
+  "date": "2025-05",
+  "authors": "Brian Chmiel, Maxim Fishman, Ron Banner et al."
+ },
+ "2507.16099": {
+  "title": "TorchAO: PyTorch-Native Training-to-Serving Model Optimization",
+  "date": "2025-07",
+  "authors": "Andrew Or, Apurva Jain, Daniel Vega-Myhre et al."
+ },
+ "2508.02343": {
+  "title": "MicroMix: Efficient Mixed-Precision Quantization with Microscaling Formats for Large Language Models",
+  "date": "2025-08",
+  "authors": "Wenyuan Liu, Haoqian Meng, Yilun Luo et al."
+ },
+ "2508.10925": {
+  "title": "gpt-oss-120b & gpt-oss-20b Model Card",
+  "date": "2025-08",
+  "authors": "OpenAI,  :, Sandhini Agarwal et al."
+ },
+ "2509.23202": {
+  "title": "Bridging the Gap Between Promise and Performance for Microscaling FP4 Quantization",
+  "date": "2025-09",
+  "authors": "Vage Egiazarian, Roberto L. Castro, Denis Kuznedelev et al."
+ },
+ "2509.25149": {
+  "title": "Pretraining Large Language Models with NVFP4",
+  "date": "2025-09",
+  "authors": "NVIDIA, Felix Abecassis, Anjulie Agrusa et al."
+ },
+ "2510.11696": {
+  "title": "QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs",
+  "date": "2025-10",
+  "authors": "Wei Huang, Yi Ge, Shuai Yang et al."
+ },
+ "2510.14557": {
+  "title": "MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving",
+  "date": "2025-10",
+  "authors": "Jungi Lee, Junyong Park, Soohyun Cha et al."
+ },
+ "2510.25602": {
+  "title": "INT v.s. FP: A Comprehensive Study of Fine-Grained Low-bit Quantization Formats",
+  "date": "2025-10",
+  "authors": "Mengzhao Chen, Meng Wu, Hui Jin et al."
+ },
+ "2510.27527": {
+  "title": "TetraJet-v2: Accurate NVFP4 Training for Large Language Models with Oscillation Suppression and Outlier Control",
+  "date": "2025-10",
+  "authors": "Yuxiang Chen, Yifan Liu, Xiaoming Xu et al."
+ },
+ "2511.04214": {
+  "title": "Block Rotation is All You Need for MXFP4 Quantization",
+  "date": "2025-11",
+  "authors": "Yuantian Shao, Peisong Wang, Yuanteng Chen et al."
+ },
+ "2512.00956": {
+  "title": "WUSH: Near-Optimal Adaptive Transforms for LLM Quantization",
+  "date": "2025-11",
+  "authors": "Jiale Chen, Vage Egiazarian, Roberto L. Castro et al."
+ },
+ "2512.02010": {
+  "title": "Four Over Six: More Accurate NVFP4 Quantization with Adaptive Block Scaling",
+  "date": "2025-12",
+  "authors": "Jack Cook, Junxian Guo, Guangxuan Xiao et al."
+ },
+ "2512.04746": {
+  "title": "SignRoundV2: Toward Closing the Performance Gap in Extremely Low-Bit Post-Training Quantization for LLMs",
+  "date": "2025-12",
+  "authors": "Wenhua Cheng, Weiwei Zhang, Heng Guo et al."
+ },
+ "2512.07419": {
+  "title": "Towards Training-free Automatic Proxy Discovery via Large Language Models for Mixed Precision Quantization",
+  "date": "2025-12",
+  "authors": "Haidong Kang, Jun Du, Guo Yu"
+ },
+ "2601.03484": {
+  "title": "From Bits to Chips: An LLM-based Hardware-Aware Quantization Agent for Streamlined Deployment of LLMs",
+  "date": "2026-01",
+  "authors": "Kaiyuan Deng, Hangyu Zheng, Minghai Qing et al."
+ },
+ "2601.07475": {
+  "title": "ARCQuant: Boosting NVFP4 Quantization with Augmented Residual Channels for LLMs",
+  "date": "2026-01",
+  "authors": "Haoqian Meng, Yilun Luo, Yafei Zhao et al."
+ },
+ "2601.09555": {
+  "title": "Benchmarking Post-Training Quantization of Large Language Models under Microscaling Floating Point Formats",
+  "date": "2026-01",
+  "authors": "Manyi Zhang, Ji-Fu Li, Zhongao Sun et al."
+ },
+ "2601.18150": {
+  "title": "FP8-RL: A Practical and Stable Low-Precision Stack for LLM Reinforcement Learning",
+  "date": "2026-01",
+  "authors": "Zhaopeng Qiu, Shuang Yu, Jingqi Zhang et al."
+ },
+ "2601.19026": {
+  "title": "Is Finer Better? The Limits of Microscaling Formats in Large Language Models",
+  "date": "2026-01",
+  "authors": "Andrea Fasoli, Monodeep Kar, Chi-Chun Liu et al."
+ },
+ "2601.19213": {
+  "title": "M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization",
+  "date": "2026-01",
+  "authors": "Weiming Hu, Zihan Zhang, Haoyan Zhang et al."
+ },
+ "2601.20088": {
+  "title": "Quantization-Aware Distillation for NVFP4 Inference Accuracy Recovery",
+  "date": "2026-01",
+  "authors": "Meng Xin, Sweta Priyadarshi, Jingyu Xin et al."
+ },
+ "2601.22813": {
+  "title": "Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation",
+  "date": "2026-01",
+  "authors": "Andrei Panferov, Erik Schultheis, Soroush Tabesh et al."
+ },
+ "2602.02047": {
+  "title": "Dissecting Outlier Dynamics in LLM NVFP4 Pretraining",
+  "date": "2026-02",
+  "authors": "Peijie Dong, Ruibo Fan, Yuechen Tao et al."
+ },
+ "2602.17681": {
+  "title": "LATMiX: Learnable Affine Transformations for Microscaling Quantization of LLMs",
+  "date": "2026-02",
+  "authors": "Ofir Gordon, Lior Dikstein, Arnon Netzer et al."
+ },
+ "2603.02883": {
+  "title": "SemanticDialect: Semantic-Aware Mixed-Format Quantization for Video Diffusion Transformers",
+  "date": "2026-03",
+  "authors": "Wonsuk Jang, Thierry Tambe"
+ },
+ "2603.08713": {
+  "title": "Unveiling the Potential of Quantization with MXFP4: Strategies for Quantization Error Reduction",
+  "date": "2026-01",
+  "authors": "Jatin Chhugani, Geonhwa Jeong, Bor-Yiing Su et al."
+ },
+ "2603.08747": {
+  "title": "Diagnosing FP4 inference: a layer-wise and block-wise sensitivity analysis of NVFP4 and MXFP4",
+  "date": "2026-03",
+  "authors": "Musa Cim, Burak Topcu, Mahmut Taylan Kandemir"
+ },
+ "2603.10444": {
+  "title": "The Curse and Blessing of Mean Bias in FP4-Quantized LLM Training",
+  "date": "2026-03",
+  "authors": "Hengjie Cao, Zhendong Huang, Mengyi Chen et al."
+ },
+ "2603.16590": {
+  "title": "BATQuant: Outlier-resilient MXFP4 Quantization via Learnable Block-wise Optimization",
+  "date": "2026-03",
+  "authors": "Ji-Fu Li, Manyi Zhang, Xiaobo Xia et al."
+ },
+ "2603.18742": {
+  "title": "6Bit-Diffusion: Inference-Time Mixed-Precision Quantization for Video Diffusion Models",
+  "date": "2026-03",
+  "authors": "Rundong Su, Jintao Zhang, Zhihang Yuan et al."
+ },
+ "2603.19173": {
+  "title": "SOL-ExecBench: Speed-of-Light Benchmarking for Real-World GPU Kernels Against Hardware Limits",
+  "date": "2026-03",
+  "authors": "Edward Lin, Sahil Modi, Siva Kumar Sastry Hari et al."
+ },
+ "2603.22370": {
+  "title": "FAAR: Format-Aware Adaptive Rounding for NVFP4",
+  "date": "2026-03",
+  "authors": "Hanglin Li, Shuchang Tian, Chen Lin et al."
+ },
+ "2603.28765": {
+  "title": "Adaptive Block-Scaled Data Types",
+  "date": "2026-03",
+  "authors": "Jack Cook, Hyemin S. Lee, Kathryn Le et al."
+ },
+ "2604.02525": {
+  "title": "AdaHOP: Fast and Accurate Low-Precision Training via Outlier-Pattern-Aware Rotation",
+  "date": "2026-04",
+  "authors": "Seonggon Kim, Alireza Khodamoradi, Pranathi Vasireddy et al."
+ },
+ "2604.03950": {
+  "title": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+  "date": "2026-04",
+  "authors": "Yifu Ding, Xinhao Zhang, Jinyang Guo"
+ },
+ "2604.17789": {
+  "title": "DuQuant++: Fine-grained Rotation Enhances Microscaling FP4 Quantization",
+  "date": "2026-04",
+  "authors": "Haokun Lin, Xinle Jia, Haobo Xu et al."
+ },
+ "2605.08565": {
+  "title": "Finer is Better (with the Right Scaling)",
+  "date": "2026-05",
+  "authors": "Clemens Schaefer, Gil Tabak"
+ },
+ "2605.09825": {
+  "title": "Pretraining large language models with MXFP4 on Native FP4 Hardware",
+  "date": "2026-05",
+  "authors": "Musa Cim, Sarthak Arora, Poovaiah Palangappa et al."
+ },
+ "2605.12245": {
+  "title": "SOAR: Scale Optimization for Accurate Reconstruction in NVFP4 Quantization",
+  "date": "2026-05",
+  "authors": "Chengzhu Bao, Xianglong Yan, Zhiteng Li et al."
+ },
+ "2605.12327": {
+  "title": "Grid Games: The Power of Multiple Grids for Quantizing Large Language Models",
+  "date": "2026-05",
+  "authors": "Vage Egiazarian, Erik Schultheis, Andrei Panferov et al."
+ },
+ "2605.12464": {
+  "title": "Search Your Block Floating Point Scales!",
+  "date": "2026-05",
+  "authors": "Tanmaey Gupta, Hayden Prairie, Xiaoxia Wu et al."
+ },
+ "2605.13915": {
+  "title": "Multi-Scale Dequant: Eliminating Dequantization Bottleneck via Activation Decomposition for Efficient LLM Inference",
+  "date": "2026-05",
+  "authors": "Lingchao Zheng, Yuwei Fan, Jun Li et al."
+ },
+ "2605.19561": {
+  "title": "TORQ: Two-Level Orthogonal Rotation for MXFP4 Quantization",
+  "date": "2026-05",
+  "authors": "Zukang Xu, Xing Hu, Dawei Yang"
+ },
+ "2605.20315": {
+  "title": "Mix-Quant: Quantized Prefilling, Precise Decoding for Agentic LLMs",
+  "date": "2026-05",
+  "authors": "Haiquan Lu, Zigeng Chen, Gongfan Fang et al."
+ },
+ "2605.23081": {
+  "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention",
+  "date": "2026-05",
+  "authors": "Joe Sharratt"
+ },
+ "2605.31035": {
+  "title": "MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations",
+  "date": "2026-05",
+  "authors": "Jiaxiang Zou, Yonghao Chen, Ruilong Wu et al."
+ },
+ "2606.04115": {
+  "title": "dMX: Differentiable Mixed-Precision Assignment for Low-Precision Floating-Point Formats",
+  "date": "2026-06",
+  "authors": "Giuseppe Franco, Ian Colbert, Pablo Monteagudo-Lago et al."
+ },
+ "2606.05682": {
+  "title": "Beyond Output Matching: Preserving Internal Geometry in NVFP4 LLM Distillation",
+  "date": "2026-06",
+  "authors": "Fangbo Tu, Junhua Zhao, Chi Liu et al."
+ },
+ "2606.07618": {
+  "title": "ScaleSweep: Accurate NVFP4 Post-Training Quantization of LLMs via Block Scale Initialization",
+  "date": "2026-05",
+  "authors": "Li Lin, Xiaojun Wan"
+ },
+ "2606.13233": {
+  "title": "ReSET: Accurate Latency-Critical NVFP4 Reasoning via Step-Aware Temperature Scaling",
+  "date": "2026-06",
+  "authors": "Sihwa Lee, Janghwan Lee, Donghoon Yoo et al."
+ },
+ "2606.15682": {
+  "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training",
+  "date": "2026-06",
+  "authors": "Janghwan Lee, Sihwa Lee, Jinseok Kim et al."
+ },
+ "2606.20474": {
+  "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
+  "date": "2026-06",
+  "authors": "Inesh Chakrabarti, David Limpus, Aditi Ghai Rana et al."
+ },
+ "2606.24143": {
+  "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?",
+  "date": "2026-06",
+  "authors": "Wonjun Kang, Kevin Galim, Seunghyuk Oh et al."
+ },
+ "2606.26587": {
+  "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+  "date": "2026-06",
+  "authors": "Haoqian Meng, Yilun Luo, Yafei Zhao et al."
+ },
+ "2607.15810": {
+  "title": "QUADS: Stabilizing NVFP4 Reinforcement Learning for MoE via QUantization-error Alignment across Dual Sides",
+  "date": "2026-07",
+  "authors": "Zhengyang Zhuge, Hao Yu, Xin Wang et al."
+ },
+ "2607.17733": {
+  "title": "MXSens: Sensitivity-Aware Mixed-Precision Quantization for Efficient LLM Inference",
+  "date": "2026-07",
+  "authors": "Simla Burcu Harma, Danila Mishin, Zhengyuan Su et al."
+ },
+ "2607.24377": {
+  "title": "MXAttention: Data-Free Optimal Scaling and Pre-Normalization Quantization for MXFP4 Attention",
+  "date": "2026-07",
+  "authors": "Jianlin Yu, Jing Lin, Linghui Kong et al."
+ },
+ "2607.24953": {
+  "title": "Stable FP4 Training via Transposition-Invariant Block Quantization",
+  "date": "2026-07",
+  "authors": "Mehdi Rahimifar, Amin Darabi, Mehran Taghian Jazi et al."
+ },
+ "2608.01847": {
+  "title": "FOCUS: FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling",
+  "date": "2026-08",
+  "authors": "Xianglong Yan, Hong Liu, Chengzhu Bao et al."
+ },
+ "2608.03867": {
+  "title": "Heterogeneity-Aware Microscaling for Efficient Low-Bit LLM Inference",
+  "date": "2026-08",
+  "authors": "Junyi Luo, Xinting Jiang, Tai-Hao Wen et al."
+ },
+ "2608.05499": {
+  "title": "APQF: Agentic Profiling-Guided Structured Pruning and Mixed-Precision Quantization with Adaptive Fine-Tuning",
+  "date": "2026-08",
+  "authors": "Sadegh Jafari, Mohiuddin Bilwal, Fan Zhou et al."
+ },
+ "2608.13966": {
+  "title": "QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction",
+  "date": "2026-08",
+  "authors": "Vincent Counathe, Ben Athiwaratkun, Christopher De Sa et al."
+ },
+ "2608.17071": {
+  "title": "KernelArc: A Multi-Agent Framework for GPU Kernel Optimization",
+  "date": "2026-08",
+  "authors": "Joyjit Kundu, Ben Stoffelen, Kaili Wang et al."
+ },
+ "2608.25188": {
+  "title": "Transforms for LLM Quantization: The Great Inversion and Format Co-Design",
+  "date": "2026-08",
+  "authors": "Ehsan Jokar"
+ },
+ "2608.26926": {
+  "title": "A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models",
+  "date": "2026-08",
+  "authors": "Artem Safronov"
+ },
+ "2608.27513": {
+  "title": "DAMP: Decay-Aware Mixed-Precision Recurrent-State Quantization",
+  "date": "2026-08",
+  "authors": "Tao Zhang, Jianchao Tan, Pingwei Sun et al."
+ },
+ "2608.28113": {
+  "title": "H-Scale: Hessian-Guided Scale Refinement for NVFP4 Sub-Byte LLM Inference",
+  "date": "2026-08",
+  "authors": "Hao Yu, Zheng Li, Dayiheng Liu et al."
+ },
+ "2609.00066": {
+  "title": "OCGQuant: Outlier-Companion Grouping for NVFP4 Quantization",
+  "date": "2026-08",
+  "authors": "Yishan Yao, Binjun Li, Hanling Yi et al."
+ },
+ "2609.00450": {
+  "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+  "date": "2026-08",
+  "authors": "Chun-Ting Chen, Dongmin Han, Hangyeol Mun et al."
+ },
+ "2609.02846": {
+  "title": "UE5M3 FP4 Block Scaling for Stable Language Model Pretraining",
+  "date": "2026-09",
+  "authors": "Robert Hu, Carlo Luschi, Paul Balanca"
+ },
+ "2609.04098": {
+  "title": "Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM",
+  "date": "2026-09",
+  "authors": "Sergii Kozyrev, Davyd Maiboroda"
+ },
+ "2609.04105": {
+  "title": "Hardware-Aware FP4 FlashAttention-4",
+  "date": "2026-09",
+  "authors": "Robert Hu"
+ },
+ "2609.09721": {
+  "title": "EFQ-Softmax: Exp-Free Quantization for Softmax",
+  "date": "2026-09",
+  "authors": "Haohui Han, Yuming Wan, Hongni Wang et al."
+ },
+ "2609.22106": {
+  "title": "PRQuant: Permutation Residual Quantization for Low-Overhead Inference",
+  "date": "2026-08",
+  "authors": "Peiran Wang, Anqi Wang, Jiaying Zhao et al."
+ },
+ "2609.26333": {
+  "title": "Disaggregated Quantization: Specializing LLM Prefill and Decode",
+  "date": "2026-09",
+  "authors": "Andrei Panferov, Maximilian Kleinegger, Sweta Priyadarshi et al."
+ },
+ "2609.26708": {
+  "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+  "date": "2026-09",
+  "authors": "Yuanteng Chen, Zhilei Liu, Peisong Wang et al."
+ },
+ "2609.32444": {
+  "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It",
+  "date": "2026-09",
+  "authors": "Tianrun Yu, Kaixiang Zhao, Shangzhe Li et al."
+ },
+ "2609.33135": {
+  "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
+  "date": "2026-09",
+  "authors": "Chencheng Deng, Jianbin Fang, Dezun Dong"
+ },
+ "2609.33496": {
+  "title": "Chameleon: Dynamic Format Adapter for Efficient Diffusion",
+  "date": "2026-09",
+  "authors": "Arnab Sanyal, Sandeep Chinchali"
+ },
+ "2609.33601": {
+  "title": "JustQuant: You Don't Need Smoothing, SVD, or Rotation for 4-Bit Activation Quantization",
+  "date": "2026-09",
+  "authors": "Kaicheng Yang, Kaisen Yang, Chunyu Liu et al."
+ },
+ "2609.34680": {
+  "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+  "date": "2026-09",
+  "authors": "Qiulin Shang, Zhoutong Wu, Jie Hu et al."
+ },
+ "2609.36654": {
+  "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+  "date": "2026-09",
+  "authors": "Ruiyi Ding, Jie Li, Kang He et al."
+ },
+ "2609.39223": {
+  "title": "QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training and Distillation of LLMs",
+  "date": "2026-09",
+  "authors": "Weili Xu, Jisen Li, Yuqing Jian et al."
+ },
+ "2610.00053": {
+  "title": "Format-Aware Fusion for Fast FP4 Pretraining",
+  "date": "2026-09",
+  "authors": "Robert Hu"
+ },
+ "2610.03218": {
+  "title": "VisionMX: Unlocking Microscaling Post-Training Quantization for Vision Models",
+  "date": "2026-10",
+  "authors": "Elad Dror Cohen, Ofir Gordon, Lior Dikstein et al."
+ },
+ "2610.08231": {
+  "title": "OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization",
+  "date": "2026-10",
+  "authors": "Neriah Ben David, Ori Meir, Or Ordentlich"
+ },
+ "2610.09346": {
+  "title": "OnlineQAT: On-Policy Distillation for Ultra-Low-Bit Large Language Models",
+  "date": "2026-10",
+  "authors": "Wenjun Wang, Heng Li, Yanggan Gu et al."
+ },
+ "2610.13767": {
+  "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+  "date": "2026-10",
+  "authors": "Mahsa Salmani, Sayeh Sharify, Hesham Mostafa"
+ },
+ "2610.15640": {
+  "title": "Context-Aware Precision Scheduling for Small Language Models",
+  "date": "2026-10",
+  "authors": "Mukund Athmaram, Manoj Rao, Liang Ma"
+ },
+ "2610.24291": {
+  "title": "An important Bottleneck in LLM Optimizers: Principle-Level Local Optima",
+  "date": "2026-10",
+  "authors": "Nian Ran, Tianhe Jia, Zhengyang Mu et al."
+ },
+ "2610.24343": {
+  "title": "What Matters for NVFP4 Training? A Comparative Study of Low-Precision Pretraining Recipes",
+  "date": "2026-10",
+  "authors": "Anjulie Agrusa, Andrei Panferov, Elizabeth Wei et al."
+ },
+ "2610.28947": {
+  "title": "Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference",
+  "date": "2026-10",
+  "authors": "Xiuyi Qin"
+ },
+ "2610.29378": {
+  "title": "Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories",
+  "date": "2026-10",
+  "authors": "Boyuan Zheng, Jing Xiong, Chenwei Wu et al."
+ }
+}

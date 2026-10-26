@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Infra 系统学习路线｜多卡训练 · 推理框架 · 量化</title>
+  <meta name="description" content="由浅入深的 AI Infra 学习路线：多卡训练、推理框架与量化，附交互式图解、算账工具、128 篇量化论文图谱与面试题库。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('ai-infra-theme');
+      if (!t) t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <div class="progress-line" id="progressLine"></div>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="8" style="fill:var(--accent)"></rect>
+          <rect x="8" y="8" width="6" height="6" rx="1.5" fill="#fff"></rect>
+          <rect x="18" y="8" width="6" height="6" rx="1.5" fill="#fff" opacity=".7"></rect>
+          <rect x="8" y="18" width="6" height="6" rx="1.5" fill="#fff" opacity=".7"></rect>
+          <rect x="18" y="18" width="6" height="6" rx="1.5" fill="#fff" opacity=".45"></rect>
+        </svg>
+        <span>AI Infra Roadmap</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#roadmap">学习路线</a>
+        <a href="#visuals">系统图解</a>
+        <a href="#tools">算账工具</a>
+        <a href="#quant">量化图解</a>
+        <a href="#papers">论文库</a>
+        <a href="#interview">面试题库</a>
+      </nav>
+      <button class="icon-btn" id="themeBtn" title="切换深色 / 浅色" aria-label="切换主题">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+      </button>
+      <a class="icon-btn" id="repoLink" href="https://github.com/Jiarwang77/ai-infra-roadmap" title="GitHub 仓库" aria-label="GitHub 仓库">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5z"></path></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">AI Infra 面试准备</span>
+          <h1>系统学习 <span class="hl">AI Infra</span><br>多卡训练 · 推理框架 · 量化</h1>
+          <p class="lead">一份由浅入深的 10 周路线：先学会“算账”，再依次攻克并行训练、推理 serving 与量化，最后做专题和面试冲刺。每个知识点都可以打勾，进度保存在你的浏览器里。</p>
+          <div class="btn-row">
+            <a class="btn primary" href="#roadmap">开始学习</a>
+            <a class="btn" href="#tools">打开算账工具</a>
+            <a class="btn" href="#papers">浏览论文库</a>
+          </div>
+          <div class="stats" id="heroStats"></div>
+        </div>
+        <div class="card hero-progress">
+          <div class="ring" id="ring">
+            <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52" fill="none" stroke-width="10"></circle><circle class="ring-fg" id="ringFg" cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round"></circle></svg>
+            <div class="ring-label"><b id="ringPct">0%</b><span id="ringSub">总进度</span></div>
+          </div>
+          <div class="stage-mini" id="stageMini"></div>
+          <button class="btn sm" id="resetBtn" type="button">重置进度</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Roadmap</span>
+          <h2>学习路线</h2>
+          <p>6 个阶段、10 周。按每天 2–3 小时估算；已经熟悉的阶段可以压缩。点击时间轴或标签切换阶段。</p>
+        </div>
+        <div class="card timeline" id="timeline"></div>
+        <div style="height:20px"></div>
+        <div class="tabs" id="stageTabs"></div>
+        <div class="card stage-panel" id="stagePanel"></div>
+      </div>
+    </section>
+
+    <section id="visuals">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Visual Guide</span>
+          <h2>系统图解</h2>
+          <p>把最常被追问的几个概念画出来：每种并行切了什么、多维并行怎么排进集群、一个推理请求经过哪些环节、PagedAttention 怎么管理显存，以及为什么 decode 受带宽限制。</p>
+        </div>
+
+        <div class="sub-head"><h3>并行策略对比</h3><p>Ψ 为参数量，N 为并行度；通信量为每卡每步的近似值。</p></div>
+        <div class="card"><div class="table-wrap" id="parallelMatrix"></div></div>
+
+        <div class="sub-head"><h3>DeviceMesh：多维并行如何映射到集群</h3><p>悬停某张卡，查看它所在的 TP / DP / PP 组。</p></div>
+        <div class="card card-pad" id="meshViz"></div>
+
+        <div class="sub-head"><h3>一个推理请求的生命周期</h3><p>点击各环节查看细节。</p></div>
+        <div class="card card-pad" id="flowViz"></div>
+
+        <div class="sub-head"><h3>PagedAttention：分页管理 KV cache</h3><p>两个请求共享系统提示词的前缀块；块大小为 4 个 token。</p></div>
+        <div class="card card-pad" id="pagedViz"></div>
+
+        <div class="sub-head"><h3>Roofline：decode 为什么受带宽限制</h3><p>8192 × 8192 线性层，B 个 token 同时计算。</p></div>
+        <div class="card card-pad" id="rooflineViz"></div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Napkin Math</span>
+          <h2>算账工具</h2>
+          <p>面试中最常见的四类估算。公式都是简化版，用来练习数量级判断；实际值还要加上框架开销与碎片。</p>
+        </div>
+        <div class="grid grid-2" id="calcGrid"></div>
+      </div>
+    </section>
+
+    <section id="quant">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Quantization</span>
+          <h2>量化图解</h2>
+          <p>数值格式、块尺度、方法地图，以及推理量化与训练量化在算法上的根本区别。</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="card card-pad">
+            <h4 style="margin-bottom:12px">数值格式的位布局</h4>
+            <div class="fmt-list" id="fmtList"></div>
+            <div class="fmt-legend"><span><i style="background:var(--c-sign)"></i>符号</span><span><i style="background:var(--c-exp)"></i>指数</span><span><i style="background:var(--c-man)"></i>尾数</span><span><i style="background:var(--c-int)"></i>整数（补码）</span></div>
+          </div>
+          <div class="card card-pad">
+            <h4 style="margin-bottom:4px">FP4 E2M1 与 INT4 的取值网格</h4>
+            <p class="muted small" style="margin:0 0 12px">都是 4 bit，但 FP4 的可表示值在 0 附近更密、在大值处更稀；INT4 按最大值 6 等比缩放后是均匀网格。</p>
+            <div class="numline" id="numLine"></div>
+            <h4 style="margin:22px 0 12px">块尺度格式</h4>
+            <div class="block-viz" id="blockViz"></div>
+          </div>
+        </div>
+
+        <div class="sub-head"><h3>方法地图</h3><p>按权重与激活位宽归类，点击方法名在论文库中搜索。</p></div>
+        <div class="card card-pad"><div class="table-wrap" id="methodMap"></div></div>
+
+        <div class="sub-head"><h3>推理量化 vs 训练量化</h3><p>推理追求“这一次前向算得准”，训练追求“几万步下来整体不偏”。</p></div>
+        <div class="gemm-grid" id="gemmGrid"></div>
+        <div style="height:16px"></div>
+        <div class="card"><div class="table-wrap" id="compareTable"></div></div>
+        <div class="cmp-notes" id="compareNotes"></div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Paper Atlas</span>
+          <h2>量化论文库</h2>
+          <p id="paperIntro"></p>
+        </div>
+        <div class="paper-charts">
+          <div class="card card-pad"><h4 style="margin-bottom:10px">按类别（点击筛选）</h4><div id="catBars"></div></div>
+          <div class="card card-pad"><h4 style="margin-bottom:4px">按发表时间</h4><p class="muted small" style="margin:0 0 8px">每季度新增论文数，按分组堆叠。</p><div class="chart" id="timeChart"></div></div>
+        </div>
+        <div class="filters">
+          <div class="seg" id="groupSeg"></div>
+          <div class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+            <input id="paperSearch" type="search" placeholder="搜索标题、作者、说明或 arXiv 编号，例如 NVFP4、Hadamard、GPTQ">
+          </div>
+          <div class="seg" id="sortSeg"><button data-sort="new" class="active">最新</button><button data-sort="old">最早</button></div>
+        </div>
+        <div class="active-filter" id="activeFilter"></div>
+        <div class="paper-list" id="paperList"></div>
+        <div class="more-row" id="moreRow"></div>
+      </div>
+    </section>
+
+    <section id="interview">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Interview</span>
+          <h2>面试题库</h2>
+          <p>各阶段自测题与答题要点、手撕代码清单、系统设计题和项目复盘方法。</p>
+        </div>
+        <div class="iv-grid">
+          <div class="card card-pad">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+              <h4>自测题</h4>
+              <div class="seg" id="quizSeg"></div>
+            </div>
+            <div id="quizList"></div>
+          </div>
+          <div class="iv-side">
+            <div class="card card-pad">
+              <div class="col-title"><span>手撕代码清单</span><span id="codingCount"></span></div>
+              <ul class="check-list" id="codingList"></ul>
+            </div>
+            <div class="card card-pad">
+              <div class="col-title"><span>系统设计题</span></div>
+              <ul class="mini-list" id="designList"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-2" style="margin-top:16px">
+          <div class="card card-pad">
+            <div class="col-title"><span>项目深挖：低精度 / 量化项目要讲到系统层面</span></div>
+            <ul class="mini-list" id="deepDive"></ul>
+          </div>
+          <div class="card card-pad">
+            <div class="col-title"><span>项目复盘模板</span></div>
+            <ol class="steps" id="reviewSteps"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>论文元数据来自 arXiv API；硬件规格为公开的稠密峰值，近似值已标注。进度只保存在本地浏览器。</p>
+      <p><a href="https://github.com/Jiarwang77/ai-infra-roadmap">GitHub 仓库</a> · 数据可通过 <code>scripts/build_papers.py</code> 重新生成</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/plan-data.js"></script>
+  <script src="assets/js/papers-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

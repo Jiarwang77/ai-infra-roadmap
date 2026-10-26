@@ -1,0 +1,91 @@
+id	cat	note
+2310.10537	A	OCP MX 标准：每块共享 E8M0 尺度加窄位宽元素，定义 MXFP8 / MXFP6 / MXFP4 / MXINT8
+2508.10925	A	gpt-oss 模型卡：MoE 权重以 MXFP4 发布，是目前最主流的原生 FP4 开源推理 checkpoint
+2509.23202	A	MR-GPTQ：首个 MXFP4 / NVFP4 PTQ 系统研究；NVFP4 的小分组使传统离群值抑制失效，MXFP4 的 2 的幂尺度误差大；提出块级 Hadamard + GPTQ 并附 kernel
+2601.09555	A	MXFP 格式下 PTQ 基准（7 种算法、15 个基准、3 个模型族）：MXFP8 近无损，MXFP4 退化明显，尺度是关键误差源
+2603.08747	A	NVFP4 与 MXFP4 的逐层、逐块敏感度分析（Qwen2.5 0.5B/7B/14B）：MLP 的 up / down 投影最敏感
+2510.25602	A	细粒度 INT 与 FP 低比特格式的系统对比，结论随位宽变化
+2601.19026	A	块越小精度反而下降的反常现象：微缩放格式中块大小低于阈值后模型变差
+2605.08565	A	Finer is Better：小块退化主要来自 E4M3 尺度的次正规数与下溢，防止尺度下溢即可缓解
+2504.04823	A	量化推理模型的首个系统实证（1.5B–70B，权重 / KV / 激活量化，AIME、MATH-500、GPQA、LiveCodeBench）
+2404.00456	B	QuaRot：用旋转消除离群值的 4-bit 推理（INT4 时代的基线）
+2405.16406	B	SpinQuant：学习旋转矩阵（INT4 时代的基线）
+2511.04214	B	MXFP4 PTQ 基准：GPTQ 稳健，全局旋转与 MXFP4 的 2 的幂尺度冲突，改为块旋转即可修复
+2604.17789	B	DuQuant++：旋转块与 MXFP4 分组（32）对齐，单次离群感知旋转即可替代双旋转加置换
+2605.19561	B	TORQ：两级正交旋转，分别处理块间方差不均和块内码本利用不均
+2603.16590	B	BATQuant：变换限制在 MXFP 块粒度内、放松正交约束的可学习块仿射变换
+2602.17681	B	LATMiX：推导 MX 量化下可逆变换的误差界，学习一般仿射变换
+2512.00956	B	WUSH：块级最优线性变换的闭式解（Hadamard 加数据二阶矩），Llama-3.1-8B-Instruct MXFP4 W4A4 上 RTN 平均 +2.8 分
+2608.25188	B	量化前变换的综述：“Great Inversion”，共享尺度分组量化奖励组内平坦化而不是能量集中
+2610.08231	B	OSFP4：对角平滑矩阵与 NVFP4 块尺度联合优化，保留厂商 NVFP4 prefill 吞吐的 94–97%
+2601.07475	B	ARCQuant：给激活矩阵增广量化残差通道，保持统一 NVFP4 格式并复用标准 GEMM
+2609.00066	B	OCGQuant：把离群通道与低幅值通道配对分组，降低 NVFP4 块内的连带量化误差
+2609.22106	B	PRQuant：通道置换加离线权重残差补偿，补偿计算仍是单个规则的 MXFP4 GEMM
+2609.33601	B	JustQuant：不用平滑、SVD 或旋转，把复杂度移到训练（蒸馏视角），部署只需普通低比特算子
+2610.13767	B	DualQuant：最小化权重重建误差的同时得到激活逐通道缩放，无需校准数据
+2512.02010	C	Four Over Six：NVFP4 自适应块缩放（部分块映射到 4 而不是 6），降低近最大值的误差
+2606.07618	C	ScaleSweep：在可行的 NVFP4 块尺度候选中扫描，选 MSE / WMSE 最小者，并给出扫描范围的上下界
+2605.12245	C	SOAR：全局与块尺度的闭式联合优化，加上量化与反量化尺度的解耦搜索
+2608.28113	C	H-Scale：用校准激活的对角二阶代理选择 NVFP4 组尺度，可直接替换 RTN 式尺度选择
+2609.36654	C	Schur Replay：在 GPTQ 中回放每个块尺度引起的后续更新来选 NVFP4 尺度；附大模型分层驻留的执行框架
+2608.01847	C	FOCUS：量化尺度不存储、无需满足 E8M0 约束，把量化与反量化尺度解耦并端到端学习
+2605.12464	C	ScaleSearch：利用尺度的尾数位细粒度搜索块浮点尺度，并给出 NVFP4 attention 版本
+2603.08713	C	OAS + MBS：纯软件手段把 MXFP4 与 NVFP4 的平均精度差距从约 10% 缩到 1% 以下，GEMM 开销约 6.2%
+2603.22370	C	FAAR：显式考虑 NVFP4 非均匀网格的可学习舍入
+2603.28765	D	IF4：每 16 个值在 FP4 与 INT4 之间选择，用 E4M3 尺度闲置的符号位标记
+2605.31035	D	MixFP4：每块在 E2M1 与 E1M2 之间选择，复用尺度符号位，零额外元数据，tensor core 面积 +3.1%
+2605.12327	D	Grid Games：每组可在多个 4-bit 网格中选更优者，小分组格式（MXFP / NVFP）收益显著
+2501.04052	D	RaZeR：把 NVFP4 冗余的负零和尺度符号位重映射为额外量化值
+2601.19213	D	M2XFP：加少量元数据恢复 MXFP4 精度的软硬协同设计
+2510.14557	D	MX+：块内离群元素不需要指数位，复用为扩展尾数
+2411.09909	D	AMXFP4：非对称共享尺度，处理 MX 格式的组内非对称
+2608.03867	D	AdaMX：逐块选择精度恢复方案、逐操作数选择表示，等效位宽不变
+2609.00450	D	HBQ：大块加低开销的二级尾数缩放，W4A5 达到 W4A16 精度，28nm ASIC 实现
+2508.02343	D	MicroMix：MXFP4 / MXFP6 / MXFP8 通道级混合精度算法与 Blackwell GEMM kernel
+2607.17733	D	MXSens：按列和层的敏感度分配 MXINT 尾数位宽（4 / 6 / 8）
+2606.04115	D	dMX：可微的 MXFP 逐层位宽分配
+2512.04746	D	SignRoundV2：梯度与重建误差引导逐层位宽，混合 MXFP 平均 4.5 bit 时差距约 1%
+2505.11594	E	SageAttention3：Blackwell 上的 FP4 推理 attention（RTX5090 1038 TOPS）
+2609.33135	E	MpFA：QK 用 NVFP4、PV 用 FP8 的免训练 FlashAttention，加秩一平滑补偿
+2609.09721	E	EFQ-Softmax：把分数直接映射为块缩放的 E2M1 概率，消除“先 exp 再量化”的失配
+2609.04105	E	硬件感知 FP4 FlashAttention-4：Direct-P 前向最高 2.13 倍 BF16（GB200）
+2605.23081	E	ThriftAttention：少量重要的 QK 块用 FP16，其余用 FP4，在线 softmax 合并
+2604.03950	E	DMA：tile 级对角混合精度的 MXFP attention Triton kernel
+2607.24377	E	MXAttention：数据无关的最优缩放边界（UOS）与预归一化量化，用于视频 DiT 的 MXFP4 attention
+2606.20474	E	UltraQuant：面向 agent 的 4-bit KV cache；在 AMD CDNA4 上用 FP8 Q、FP4 KV、UE8M0 组尺度和原生 scaled MFMA
+2608.27513	E	DAMP：GDN / KDA 循环状态的 PTQ；均匀 INT4 / NVFP4 会使推理精度崩溃，提出衰减感知混合精度
+2609.04098	E	Gated DeltaNet 在 NVFP4 W4A4 下依然稳健（Qwen3.8-27B 全部 496 个线性层），并给出机制解释
+2503.18773	E	BitDecoding：用 tensor core 解码低比特 KV cache
+2606.15682	F	ReQAT：FP4 推理失败集中在数字、运算符等低熵 token；轨迹对齐 QAT + 选择性熵最小化
+2606.13233	F	ReSET：NVFP4 推理模型的逐步熵温度缩放，并补齐小 batch decode 的 kernel
+2605.20315	F	Mix-Quant：prefill 用 NVFP4、decode 保持 BF16，面向长输入的 agent 推理
+2609.26333	F	分离式量化：prefill 与 decode 用不同格式与权重；去掉 decode 的激活量化可提升 decode 密集型任务精度
+2610.29378	F	OnQ：低比特模型长推理常在 token 预算内无法终止；用学生自生成轨迹恢复
+2609.26708	F	低比特推理的 on-policy 蒸馏：QAD 存在量化放大的 exposure bias，长生成陷入重复循环
+2601.20088	G	NVIDIA QAD 实践：对 SFT / RL / merge 多阶段后训练模型稳定、对数据质量不敏感，NVFP4 恢复到接近 BF16
+2606.05682	G	CKA-QAD：只对齐输出会掩盖内部表示退化，RL 后训练模型尤其严重
+2609.39223	G	QATFactory：部署对齐的 QAD / 量化感知 RL，BF16 matmul 仿真 NVFP4 / MXFP4 / Q4_K，直接导出 vLLM 与 llama.cpp
+2610.09346	G	OnlineQAT：块级 QAT 初始化后，在学生自生成响应上做 on-policy 蒸馏
+2608.13966	G	QUASAR：用损失感知重建降低 QAT 的损失下限
+2503.13565	H	ML-SpecQD：直接 cast 的 MXFP4 权重模型作即插即用 draft，最高 2 倍
+2606.26587	H	SharQ：在线稀疏-稠密分解，把 N:M 激活稀疏与 FP4 量化结合
+2610.28947	H	2:4 稀疏与降精度的比较：只要还有更低精度可用，加 2:4 更差；到最低精度后 2:4 仍有 1.3–1.7 倍
+2605.13915	H	Multi-Scale Dequant：把激活拆成多个低精度分量，直接与量化权重相乘，去掉反量化
+2405.04532	H	QServe：W4A8KV4 量化与服务系统协同设计
+2507.16099	H	TorchAO：PyTorch 原生的训练到部署量化工具链
+2411.05007	J	SVDQuant：低秩分支吸收离群值的 4-bit 扩散模型
+2609.33496	J	Chameleon：扩散模型 PTQ 不再预先固定数值格式，动态选择格式
+2603.02883	J	SemanticDialect：视频 DiT 的语义感知混合格式量化
+2603.18742	J	6Bit-Diffusion：视频扩散模型的推理时混合精度量化
+2610.03218	J	VisionMX：视觉模型的微缩放 PTQ
+2609.34680	I	QuantForge：LLM 驱动的 PTQ 程序演化，记录竞争解释并选择区分性对照，发现 MXFP4 W4A4 量化器 HiRes
+2608.05499	I	APQF：profiling agent 测成本与敏感度，LLM 规划逐层剪枝率、位宽与恢复策略，执行前校验
+2601.03484	I	HAQA：基于 LLM 的硬件感知量化 agent，自动调超参与硬件配置
+2512.07419	I	TAP：LLM 加进化搜索自动发现混合精度量化的代理指标
+2608.26926	I	层重要度指标：SQNR 保真度加 roofline 延迟模型，无需实际执行
+2610.15640	I	上下文感知精度调度：校准时延模型与张量敏感度结合；更少比特不一定更快
+2608.17071	I	KernelArc：多 agent GPU kernel 优化，结论共享记忆与确定性 benchmark 守卫（含原生 NVFP4 attention）
+2603.19173	I	SOL-ExecBench：以硬件 speed-of-light 为基准评价 agent 生成的 kernel（含 NVFP4）
+2610.24291	I	LLM 优化器的“原则级局部最优”：搜索收敛到少数设计原则后长期停滞
+2606.24143	G	AsyncOPD：研究 on-policy 蒸馏能容忍多旧的 rollout 数据，用于降低 OPD 的 rollout 成本
+2604.02525	B	AdaHOP：按张量的离群模式（行 / 列）选择 Hadamard 变换方向，而不是全局统一使用
