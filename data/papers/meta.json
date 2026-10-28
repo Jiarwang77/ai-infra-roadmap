@@ -279,6 +279,11 @@
   "date": "2026-01",
   "authors": "Meng Xin, Sweta Priyadarshi, Jingyu Xin et al."
  },
+ "2601.22347": {
+  "title": "Pushing the Limits of Block Rotations in Post-Training Quantization",
+  "date": "2026-01",
+  "authors": "Sai Sanjeet, Ian Colbert, Pablo Monteagudo-Lago et al."
+ },
  "2601.22813": {
   "title": "Quartet II: Accurate LLM Pre-Training in NVFP4 by Improved Unbiased Gradient Estimation",
   "date": "2026-01",
@@ -628,6 +633,11 @@
   "title": "What Matters for NVFP4 Training? A Comparative Study of Low-Precision Pretraining Recipes",
   "date": "2026-10",
   "authors": "Anjulie Agrusa, Andrei Panferov, Elizabeth Wei et al."
+ },
+ "2610.25675": {
+  "title": "LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models",
+  "date": "2026-10",
+  "authors": "Desheng Xu, Hanglin Li, Tianchen Song et al."
  },
  "2610.28947": {
   "title": "Is 2:4 Sparsity Still Worth It? Semi-Structured Sparsity versus Quantization in LLM Inference",

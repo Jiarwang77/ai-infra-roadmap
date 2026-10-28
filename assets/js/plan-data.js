@@ -141,7 +141,7 @@ window.PLAN_DATA = {
     {
       id: 's3', short: '量化', title: '量化：从原理到 kernel 与部署', weeks: '第 8 周', start: 8, end: 8,
       goal: '能把一个量化方案从原理、误差来源、kernel 实现讲到端到端收益。',
-      intro: '面试官通常从基础一路追问到 kernel 和系统收益。已经熟悉的部分快速过，重点放在“为什么有效”和“什么时候没用”。配套的「量化图解」和「论文库」（128 篇）在下方。',
+      intro: '面试官通常从基础一路追问到 kernel 和系统收益。已经熟悉的部分快速过，重点放在“为什么有效”和“什么时候没用”。配套的「量化图解」和「论文库」（130 篇）在下方。',
       topics: [
         { id: 's3-t1', title: '量化基础', text: '对称与非对称；per-tensor / channel / token / group / block 粒度；静态与动态量化；PTQ 与 QAT（STE）；为什么激活比权重难量化（离群通道）。' },
         { id: 's3-t2', title: '数据格式', text: 'FP8 的 E4M3 与 E5M2；INT4 与 FP4（E2M1）；MXFP8 / MXFP4（block 32、E8M0 尺度）与 NVFP4（block 16、E4M3 尺度，外加一级 FP32 张量尺度）。' },
@@ -158,7 +158,7 @@ window.PLAN_DATA = {
         { title: 'torchao', by: 'PyTorch', url: 'https://github.com/pytorch/ao' },
         { title: 'Transformer Engine', by: 'NVIDIA', url: 'https://github.com/NVIDIA/TransformerEngine' },
         { title: 'DeepGEMM', by: 'DeepSeek', url: 'https://github.com/deepseek-ai/DeepGEMM' },
-        { title: '本站论文库', by: '128 篇', url: '#papers', note: '经典基础 20 + 推理侧 90 + 训练侧 18' }
+        { title: '本站论文库', by: '130 篇', url: '#papers', note: '经典基础 20 + 推理侧 92 + 训练侧 18' }
       ],
       projects: [
         { id: 's3-p1', text: '手写 per-channel / per-group 的 INT4 与 FP4（MXFP4、NVFP4）量化和反量化，测某个 Llama 线性层的误差。' },
